@@ -61,8 +61,6 @@ class Playground extends HTMLElement {
         },
       });
 
-
-
       this.editor.onDidChangeModelContent(() => this.updatePreview());
       window.addEventListener("resize", () => this.editor.layout({}));
 			this.updatePreview();
@@ -79,7 +77,5 @@ class Switch extends HTMLElement {
   }
 }
 
-
 customElements.define('css-playground', Playground);
-
 customElements.define("css-switch", Switch);
