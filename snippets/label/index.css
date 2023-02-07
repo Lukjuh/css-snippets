@@ -1,0 +1,6 @@
+.label {
+	--_font-weight: 600;
+
+	display: inline-flex;
+	font-weight: var(--_font-weight);
+}

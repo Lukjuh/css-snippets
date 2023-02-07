@@ -1,5 +1,11 @@
 /* CSS snippets */
 @import "../snippets/button";
+@import "../snippets/checkbox";
+@import "../snippets/input";
+@import "../snippets/label";
+@import "../snippets/radio";
+@import "../snippets/select";
+@import "../snippets/textarea";
 
 /* Global */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");

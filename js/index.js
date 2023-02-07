@@ -36,7 +36,7 @@ class Playground extends HTMLElement {
       this.querySelector('.js-variant').innerHTML += `<option value="${variant}">${variant}</option>`
     });
 
-    if (Object.keys(snippet.htmlVariants).length) {
+    if (Object.keys(snippet.htmlVariants).length > 1) {
       this.querySelector('.js-variant').hidden = false;
     }
     

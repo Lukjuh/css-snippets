@@ -1,6 +1,6 @@
 import buttonStyle from "./index.css?raw";
 
-const button = {
+const snippet = {
   cssIndex: buttonStyle,
   htmlVariants: {
     basic: `<button class="button" type="button">Button</button>`,
@@ -8,4 +8,4 @@ const button = {
   }
 }
 
-export default button;
+export default snippet;
