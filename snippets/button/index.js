@@ -1,4 +1,4 @@
-import buttonStyle from "./index.css?inline";
+import buttonStyle from "./index.css?raw";
 
 const button = {
   cssIndex: buttonStyle,
