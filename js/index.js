@@ -61,6 +61,8 @@ class Playground extends HTMLElement {
         },
       });
 
+      this.htmlModel.updateOptions({ tabSize: 2 });
+			this.cssModel.updateOptions({ tabSize: 2 });
       this.editor.onDidChangeModelContent(() => this.updatePreview());
       window.addEventListener("resize", () => this.editor.layout({}));
 			this.updatePreview();

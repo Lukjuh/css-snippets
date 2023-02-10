@@ -23,6 +23,7 @@ html {
 	--font-family: "Inter", sans-serif;
 	--font-size-sm: 0.875rem;
 	--font-size-md: 1rem;
+	--font-size-lg: 1.125rem;
 	--size-1: 0.25rem;
 	--size-2: 0.5rem;
 	--size-3: 0.75rem;
@@ -256,8 +257,24 @@ h4 {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: var(--size-2) var(--size-5);
+	padding: var(--size-3) var(--size-5);
 	border-bottom: 1px solid var(--border);
+}
+
+.header .logo {
+	font-size: var(--font-size-lg);
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 0.175rem;
+}
+
+.header .logo span {
+	padding: 0.35rem;
+	background-color: var(--brand);
+	color: var(--surface);
+	line-height: 1;
+	border-radius: var(--radius);
 }
 
 .header a {
@@ -309,6 +326,7 @@ h4 {
 
 /* Card */
 .card {
+	--width: ;
 	display: flex;
 	flex-direction: column;
 	border-radius: var(--radius);
@@ -325,7 +343,11 @@ h4 {
 	place-items: center;
 	aspect-ratio: 4/3;
 	background-color: hsl(222, 100%, 99%);
-	padding: var(--size-5);
+	padding: var(--size-6);
+}
+
+.is-full .card-body > * {
+	width: 100%;
 }
 
 .card-footer {
