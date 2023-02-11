@@ -16,7 +16,7 @@ class Playground extends HTMLElement {
   }
 
   updateVariant(e) {
-		this.htmlModel.setValue(snippet.htmlVariants[e.target.value]);
+		this.htmlModel.setValue(snippet.htmlVariants[e.target.value].trim());
 		this.updatePreview();
   }
 
@@ -42,7 +42,7 @@ class Playground extends HTMLElement {
     
     loader.init().then((monaco) => {
       this.htmlModel = monaco.editor.createModel(
-        snippet.htmlVariants.basic,
+        snippet.htmlVariants.basic.trim(),
         "html",
         monaco.Uri.parse("file:///html")
       );
