@@ -18,7 +18,7 @@ html {
 	--text-medium: #666968;
 	--border: #e0e4e5;
 	--border-medium: #d1d6d8;
-	--brand-weakest: #edf2ff;
+	--brand-weakest: #fafbff;
 	--brand: #4263eb;
 	--font-family: "Inter", sans-serif;
 	--font-size-sm: 0.875rem;
@@ -342,7 +342,7 @@ h4 {
 	display: grid;
 	place-items: center;
 	aspect-ratio: 4/3;
-	background-color: hsl(222, 100%, 99%);
+	background-color: var(--brand-weakest);
 	padding: var(--size-6);
 }
 
@@ -361,4 +361,15 @@ h4 {
 
 .card-footer h4::first-letter {
 	text-transform: uppercase;
+}
+
+/* Intro */
+.intro {
+	text-align: center;
+	padding-block-start: var(--size-4);
+	padding-block-end: var(--size-7);
+}
+
+.intro h2 {
+	font-weight: 400;
 }

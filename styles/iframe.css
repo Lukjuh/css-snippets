@@ -19,5 +19,9 @@ body {
 }
 
 body:has(.input, .select, .textarea) .container {
+	display: grid;
+	gap: 0.5rem;
 	width: min(100% - 2rem, 350px);
 }
+/* 
+body:has(.input) */
