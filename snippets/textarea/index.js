@@ -1,11 +1,10 @@
 import textareaStyle from "./index.css?raw";
 
-const snippet = {
-  cssIndex: textareaStyle,
-  htmlVariants: {
-    basic: `<textarea class="textarea" rows="4" placeholder="Add your comment..."></textarea>`,
-    disabled: `<textarea class="textarea" rows="4" placeholder="Add your comment..." disabled></textarea>`,
-    sizes:`
+const basic = `<textarea class="textarea" rows="4" placeholder="Add your comment..."></textarea>`;
+
+const disabled = `<textarea class="textarea" rows="4" placeholder="Add your comment..." disabled></textarea>`;
+
+const sizes = `
 <style>
 .textarea-small {
   --_padding-x: 0.5rem;
@@ -23,7 +22,14 @@ const snippet = {
 <textarea class="textarea textarea-small" rows="4" placeholder="Add your comment..."></textarea>
 <textarea class="textarea" rows="4" placeholder="Add your comment..."></textarea>
 <textarea class="textarea textarea-large" rows="4" placeholder="Add your comment..."></textarea>
-    `
+`;
+
+const snippet = {
+  cssIndex: textareaStyle,
+  htmlVariants: {
+    basic,
+    disabled,
+    sizes
   }
 }
 

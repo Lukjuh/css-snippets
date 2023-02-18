@@ -1,12 +1,9 @@
 import selectStyle from "./index.css?raw";
 
-const snippet = {
-  cssIndex: selectStyle,
-  htmlVariants: {
-    basic:`
+const basic = `
 <div class="select">
   <select>
-    <option value="">--Please choose an option--</option>
+    <option value="">--Select an option--</option>
     <option value="dog">🐶 Dog</option>
     <option value="cat">🐱 Cat</option>
     <option value="hamster">🐹 Hamster</option>
@@ -14,11 +11,12 @@ const snippet = {
     <option value="spider">🕷️ Spider</option>
   </select>
 </div>
-    `,
-    disabled:`
+`;
+
+const disabled = `
 <div class="select">
   <select disabled>
-    <option value="">--Please choose an option--</option>
+    <option value="">--Select an option--</option>
     <option value="dog">🐶 Dog</option>
     <option value="cat">🐱 Cat</option>
     <option value="hamster">🐹 Hamster</option>
@@ -26,8 +24,9 @@ const snippet = {
     <option value="spider">🕷️ Spider</option>
   </select>
 </div>
-    `,
-    sizes:`
+`;
+
+const sizes = `
 <style>
   .select-small {
     --_padding-x: 0.5rem;
@@ -46,7 +45,7 @@ const snippet = {
 
 <div class="select select-small">
   <select>
-    <option value="">--Please choose an option--</option>
+    <option value="">--Select an option--</option>
     <option value="dog">🐶 Dog</option>
     <option value="cat">🐱 Cat</option>
     <option value="hamster">🐹 Hamster</option>
@@ -57,7 +56,7 @@ const snippet = {
 
 <div class="select">
   <select>
-    <option value="">--Please choose an option--</option>
+    <option value="">--Select an option--</option>
     <option value="dog">🐶 Dog</option>
     <option value="cat">🐱 Cat</option>
     <option value="hamster">🐹 Hamster</option>
@@ -68,7 +67,7 @@ const snippet = {
 
 <div class="select select-large">
   <select>
-    <option value="">--Please choose an option--</option>
+    <option value="">--Select an option--</option>
     <option value="dog">🐶 Dog</option>
     <option value="cat">🐱 Cat</option>
     <option value="hamster">🐹 Hamster</option>
@@ -76,7 +75,14 @@ const snippet = {
     <option value="spider">🕷️ Spider</option>
   </select>
 </div>
-    `
+`;
+
+const snippet = {
+  cssIndex: selectStyle,
+  htmlVariants: {
+    basic,
+    disabled,
+    sizes
   }
 }
 

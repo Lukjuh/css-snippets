@@ -1,11 +1,10 @@
 import checkboxStyle from "./index.css?raw";
 
-const snippet = {
-  cssIndex: checkboxStyle,
-  htmlVariants: {
-    basic: `<input class="checkbox" type="checkbox" checked>`,
-    disabled: `<input class="checkbox" type="checkbox" checked disabled>`,
-    sizes: `
+const basic = `<input class="checkbox" type="checkbox" checked>`;
+
+const disabled = `<input class="checkbox" type="checkbox" checked disabled>`;
+
+const sizes = `
 <style>
 .checkbox-small {
   --_size: 0.875em;
@@ -19,7 +18,14 @@ const snippet = {
 <input class="checkbox checkbox-small" type="checkbox" checked>
 <input class="checkbox" type="checkbox" checked>
 <input class="checkbox checkbox-large" type="checkbox" checked>
-    `,
+`;
+
+const snippet = {
+  cssIndex: checkboxStyle,
+  htmlVariants: {
+    basic,
+    disabled,
+    sizes,
   }
 }
 

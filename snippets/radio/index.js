@@ -1,17 +1,16 @@
 import radioStyle from "./index.css?raw";
 
-const snippet = {
-  cssIndex: radioStyle,
-  htmlVariants: {
-    basic: `
+const basic = `
 <input class="radio" type="radio" name="basic">
 <input class="radio" type="radio" name="basic" checked>
-    `,
-    disabled: `
+`;
+
+const disabled = `
 <input class="radio" type="radio" name="disabled" checked disabled>
 <input class="radio" type="radio" name="disabled" checked disabled>
-    `,
-    sizes: `
+`;
+
+const sizes = `
 <style>
 .radio-small {
   --_size: 0.875em;
@@ -25,7 +24,14 @@ const snippet = {
 <input class="radio radio-small" type="radio" name="sizes">
 <input class="radio" type="radio" name="sizes">
 <input class="radio radio-large" type="radio" name="sizes">
-    `
+`;
+
+const snippet = {
+  cssIndex: radioStyle,
+  htmlVariants: {
+    basic,
+    disabled,
+    sizes
   }
 }
 

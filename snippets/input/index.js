@@ -1,11 +1,10 @@
 import inputStyle from "./index.css?raw";
 
-const snippet = {
-  cssIndex: inputStyle,
-  htmlVariants: {
-    basic: `<input class="input" type="text" placeholder="First name">`,
-    disabled: `<input class="input" type="text" placeholder="First name" disabled>`,
-    sizes:`
+const basic = `<input class="input" type="text" placeholder="First name">`;
+
+const disabled = `<input class="input" type="text" placeholder="First name" disabled>`;
+
+const sizes = `
 <style>
 .input-small {
   --_padding-x: 0.5rem;
@@ -23,7 +22,14 @@ const snippet = {
 <input class="input input-small" type="text" placeholder="First name">
 <input class="input" type="text" placeholder="First name">
 <input class="input input-large" type="text" placeholder="First name">
-    `
+`;
+
+const snippet = {
+  cssIndex: inputStyle,
+  htmlVariants: {
+    basic,
+    disabled,
+    sizes
   }
 }
 

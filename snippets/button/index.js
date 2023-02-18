@@ -1,11 +1,10 @@
 import buttonStyle from "./index.css?raw";
 
-const snippet = {
-  cssIndex: buttonStyle,
-  htmlVariants: {
-    basic: `<button class="button" type="button">Button</button>`,
-    disabled: `<button class="button" type="button" disabled>Button</button>`,
-    sizes: `
+const basic = `<button class="button" type="button">Button</button>`;
+
+const disabled = `<button class="button" type="button" disabled>Button</button>`;
+
+const sizes = `
 <style>
 .button-small {
   --_padding-x: 0.5rem;
@@ -23,8 +22,9 @@ const snippet = {
 <button class="button button-small" type="button">Small button</button>
 <button class="button" type="button">Default button</button>
 <button class="button button-large" type="button">Large button</button>
-        `,
-    "custom color": `
+`;
+
+const customColor = `
 <style>
 .button-custom {
   --_color: #ffffff;
@@ -42,8 +42,9 @@ const snippet = {
 </style>
 
 <button class="button button-custom" type="button">Button</button>
-    `,
-    "custom variants": `
+`;
+
+const customVariants = `
 <style>
 .button-outline-custom {
   --_color: #4263eb;
@@ -76,7 +77,16 @@ const snippet = {
 
 <button class="button button-outline-custom" type="button">Button outline</button>
 <button class="button button-ghost-custom" type="button">Button ghost</button>
-    `,
+`;
+
+const snippet = {
+  cssIndex: buttonStyle,
+  htmlVariants: {
+    basic,
+    disabled,
+    sizes,
+    "custom color": customColor,
+    "custom variants": customVariants,
   },
 };
 
