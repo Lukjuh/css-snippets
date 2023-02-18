@@ -59,7 +59,7 @@ const snippet = {
   --_active-border-color: #364fc7;
 }
 
-.button-subtle-custom {
+.button-ghost-custom {
   --_color: #4263eb;
   --_bg: #ffffff;
   --_border-color: #ffffff;
@@ -75,7 +75,7 @@ const snippet = {
 </style>
 
 <button class="button button-outline-custom" type="button">Button outline</button>
-<button class="button button-subtle-custom" type="button">Button subtle</button>
+<button class="button button-ghost-custom" type="button">Button ghost</button>
     `,
   },
 };
