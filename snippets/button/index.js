@@ -79,6 +79,18 @@ const customVariants = `
 <button class="button button-ghost-custom" type="button">Button ghost</button>
 `;
 
+const withIcons = `
+<button class="button" type="button">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+  Add to cart
+</button>
+
+<button class="button" type="button">
+  Follow
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+</button>
+`;
+
 const snippet = {
   cssIndex: buttonStyle,
   htmlVariants: {
@@ -87,6 +99,7 @@ const snippet = {
     sizes,
     "custom color": customColor,
     "custom variants": customVariants,
+    "with icons": withIcons,
   },
 };
 
