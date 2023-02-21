@@ -1,4 +1,5 @@
 import buttonStyle from "./index.css?raw";
+import iconStyle from "../icon/index.css?raw";
 
 const basic = `<button class="button" type="button">Button</button>`;
 
@@ -26,7 +27,7 @@ const sizes = `
 
 const customColor = `
 <style>
-.button-custom {
+.button-primary {
   --_color: #ffffff;
   --_bg: #4263eb;
   --_border-color: #4263eb;
@@ -41,11 +42,31 @@ const customColor = `
 }
 </style>
 
-<button class="button button-custom" type="button">Button</button>
+<button class="button button-primary" type="button">Button</button>
 `;
 
 const customVariants = `
 <style>
+.button-outline {
+  --_hover-color: #ffffff;
+  --_hover-bg: #666968;
+  --_hover-border-color: #666968;
+
+  --_active-color: #ffffff;
+  --_active-bg: #50514f;
+  --_active-border-color: #50514f;
+}
+
+.button-ghost {
+  --_border-color: #ffffff;
+
+  --_hover-bg: #f8fafb;
+  --_hover-border-color: #f8fafb;
+
+  --_active-bg: #f2f4f6;
+  --_active-border-color: #f2f4f6;
+}
+
 .button-outline-custom {
   --_color: #4263eb;
   --_bg: #ffffff;
@@ -75,24 +96,30 @@ const customVariants = `
 }
 </style>
 
+<button class="button button-outline" type="button">Button outline</button>
+<button class="button button-ghost" type="button">Button ghost</button>
+
 <button class="button button-outline-custom" type="button">Button outline</button>
 <button class="button button-ghost-custom" type="button">Button ghost</button>
 `;
 
 const withIcons = `
+<!-- dependency: https://www.css-snippets.io/playground.html?name=icon -->
+
 <button class="button" type="button">
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+  <svg class="icon" width="1.25em" style="--_icon: url(https://api.iconify.design/lucide/shopping-cart.svg);"></svg>
   Add to cart
 </button>
 
 <button class="button" type="button">
   Follow
-  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+  <svg class="icon" width="1.25em" style="--_icon: url(https://api.iconify.design/lucide/arrow-right-circle.svg);"></svg>
 </button>
 `;
 
 const snippet = {
   cssIndex: buttonStyle,
+  cssVariants: iconStyle,
   htmlVariants: {
     basic,
     disabled,

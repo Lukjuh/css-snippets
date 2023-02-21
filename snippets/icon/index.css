@@ -1,0 +1,14 @@
+.icon {
+	--_icon: url(https://api.iconify.design/lucide/smile.svg);
+	--_size: 1em;
+
+	display: inline-block;
+	aspect-ratio: 1;
+	background-color: currentColor;
+	-webkit-mask: var(--_icon) center / contain no-repeat;
+	mask: var(--_icon) center / contain no-repeat;
+}
+
+.icon:not([width]) {
+	width: var(--_size);
+}

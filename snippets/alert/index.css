@@ -1,0 +1,26 @@
+.alert {
+	--_padding-x: 1rem;
+	--_padding-y: 0.75rem;
+	--_gap: 0.5rem;
+	--_border-radius: 0.25rem;
+
+	--_border-color: transparent;
+	--_color: #21307a;
+	--_bg: #dbe4ff;
+
+	display: flex;
+	align-items: center;
+	gap: var(--_gap);
+
+	padding-block: var(--_padding-y);
+	padding-inline: var(--_padding-x);
+	border-radius: var(--_border-radius);
+
+	border: 1px solid var(--_border-color);
+	color: var(--_color);
+	background-color: var(--_bg);
+}
+
+.alert svg {
+	flex-shrink: 0;
+}

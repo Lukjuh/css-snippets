@@ -1,11 +1,24 @@
 /* CSS snippets */
+@import "../snippets/accordion";
+@import "../snippets/alert";
+@import "../snippets/avatar";
+@import "../snippets/badge";
+@import "../snippets/breadcrumbs";
 @import "../snippets/button";
+@import "../snippets/button-group";
+@import "../snippets/button-icon";
 @import "../snippets/checkbox";
+@import "../snippets/divider";
+@import "../snippets/group";
+@import "../snippets/icon";
 @import "../snippets/input";
 @import "../snippets/label";
+@import "../snippets/link";
 @import "../snippets/radio";
 @import "../snippets/select";
+@import "../snippets/stack";
 @import "../snippets/textarea";
+@import "../snippets/wrapper";
 
 /* Global */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
@@ -259,6 +272,7 @@ h4 {
 	justify-content: space-between;
 	padding: var(--size-3) var(--size-5);
 	border-bottom: 1px solid var(--border);
+	background-color: var(--surface);
 }
 
 .header .logo {
