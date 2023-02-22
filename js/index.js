@@ -28,7 +28,7 @@ class Playground extends HTMLElement {
   }
 
   connectedCallback() {
-    this.querySelector('.js-title').textContent = name;
+    this.querySelector('.js-title').textContent = name.replaceAll("-", " ");
     this.querySelectorAll(".js-tab").forEach((el) => el.addEventListener("click", this.updateModel.bind(this)));
     this.querySelector(".js-variant")?.addEventListener("change", this.updateVariant.bind(this));
 

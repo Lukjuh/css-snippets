@@ -1,6 +1,6 @@
 import style from "./index.css?raw";
 
-const basic = `<label class="label" for="your-input">First name</label>`;
+const basic = `<span class="badge">99</span>`;
 
 const snippet = {
 	cssIndex: style,

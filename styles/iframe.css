@@ -26,8 +26,22 @@ body {
 	gap: 0.5rem;
 }
 
-body:has(.input, .select, .textarea) .container {
+body:has(.accordion, .alert, .input, .select, .textarea) .container {
 	display: grid;
 	gap: 0.5rem;
 	width: min(100%, 350px);
+}
+
+:is(.group, .stack) > * {
+	padding: 0.35rem 0.5rem;
+	border-radius: 0.25rem;
+	color: #21307a;
+  background: #dbe4ff;
+}
+
+:is(.wrapper) {
+	padding: 0.35rem 0.5rem;
+	border-radius: 0.25rem;
+	color: #21307a;
+  background: #dbe4ff;
 }
