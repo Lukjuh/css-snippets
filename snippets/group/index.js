@@ -7,6 +7,8 @@ const basic = `
 	<div>item</div>
 	<div>item</div>
 	<div>item</div>
+	<div>item</div>
+	<div>item</div>
 </div>
 `;
 
