@@ -1,0 +1,8 @@
+.button-icon {
+	--_padding-y: 0;
+	--_padding-x: 0;
+	--_size: 2rem;
+
+	height: var(--_size);
+	width: var(--_size);
+}
