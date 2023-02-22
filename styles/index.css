@@ -390,14 +390,14 @@ h4 {
 }
 
 /* Home */
-:is(.group, .stack) > * {
+.card :is(.group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;
   background: #dbe4ff;
 }
 
-:is(.wrapper) {
+.card :is(.wrapper) {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;
