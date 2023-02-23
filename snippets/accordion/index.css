@@ -1,73 +1,73 @@
 .accordion {
-  --_padding-x: 1rem;
-  --_padding-y: 1rem;
+	--_padding-x: 1rem;
+	--_padding-y: 1rem;
 
-  --_color: #252521;
-  --_bg: #ffffff;
-  --_border-color: #e0e4e5;
+	--_color: #252521;
+	--_bg: #ffffff;
+	--_border-color: #e0e4e5;
 
-  --_button-icon: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
-  --_button-icon-size: 1.25rem;
-  --_button-icon-transform: rotate(180deg);
-  --_button-hover-bg: #f8fafb;
-  --_button-focus-outline-color: #364fc7;
+	--_button-icon: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='currentColor' fill-rule='evenodd' d='M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.5a.75.75 0 0 1-1.08 0l-4.25-4.5a.75.75 0 0 1 .02-1.06Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+	--_button-icon-size: 1.25rem;
+	--_button-icon-transform: rotate(180deg);
+	--_button-hover-bg: #f8fafb;
+	--_button-focus-outline-color: #364fc7;
 }
 
 .accordion-item {
-  color: var(--_color);
-  background-color: var(--_bg);
+	color: var(--_color);
+	background-color: var(--_bg);
 }
 
 .accordion-item:not(:last-child) {
-  border-block-end: 1px solid var(--_border-color);
+	border-block-end: 1px solid var(--_border-color);
 }
 
 .accordion-item > * {
-  margin: 0;
+	margin: 0;
 }
 
 .accordion-button {
-  cursor: pointer;
-  font-family: inherit;
-  background: none;
-  border: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  text-align: start;
-  padding-block: var(--_padding-y);
-  padding-inline: var(--_padding-x);
-  font-size: initial;
-  color: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	background: none;
+	border: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	text-align: start;
+	padding-block: var(--_padding-y);
+	padding-inline: var(--_padding-x);
+	font-size: initial;
+	color: inherit;
 }
 
 .accordion-button::after {
-  content: "";
-  flex-shrink: 0;
-  height: var(--_button-icon-size);
-  width: var(--_button-icon-size);
-  background-color: currentColor;
-  -webkit-mask: var(--_button-icon) center / contain no-repeat;
-  mask: var(--_button-icon) center / contain no-repeat;
+	content: "";
+	flex-shrink: 0;
+	height: var(--_button-icon-size);
+	width: var(--_button-icon-size);
+	background-color: currentColor;
+	-webkit-mask: var(--_button-icon) center / contain no-repeat;
+	mask: var(--_button-icon) center / contain no-repeat;
 }
 
 .accordion-button:hover {
-  background-color: var(--_button-hover-bg);
+	background-color: var(--_button-hover-bg);
 }
 
 .accordion-button:focus-visible {
-  outline-color: var(--_button-focus-outline-color);
+	outline-color: var(--_button-focus-outline-color);
 }
 
 .accordion-button[aria-expanded="true"]::after {
-  transform: var(--_button-icon-transform);
+	transform: var(--_button-icon-transform);
 }
 
 .accordion-panel {
-  padding-block: var(--_padding-y);
-  padding-inline: var(--_padding-x);
+	padding-block: var(--_padding-y);
+	padding-inline: var(--_padding-x);
 }
 
-.accordion-panel:not(.is-active) {
-  display: none;
+.accordion-panel:not(.is-open) {
+	display: none;
 }

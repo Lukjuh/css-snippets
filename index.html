@@ -1,251 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/index.css" />
+		<link rel="stylesheet" href="./styles/snippets.css" />
+		<script defer type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="F674XV3WjmTu0t4Cr0nVjm1ZqAxmoQtz"></script>
+		<title>CSS snippets</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="./styles/index.css" />
-	<script defer type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs"
-		data-code="F674XV3WjmTu0t4Cr0nVjm1ZqAxmoQtz"></script>
-	<title>CSS snippets</title>
-</head>
-
-<body>
-	<header class="header">
-		<a href="/" class="logo"><span>CSS</span>snippets</a>
-		<a href="https://github.com/Lukjuh/css-snippets"><img src="./github.svg" /></a>
-	</header>
-	<main>
-		<div class="container py-8">
-			<div class="intro">
-				<h2>
-					A collection of CSS snippets to help you build common interfaces.
-				</h2>
+	<body>
+		<header class="header">
+			<a href="/" class="logo"><span>CSS</span>snippets</a>
+			<a href="https://github.com/Lukjuh/css-snippets" target="_blank"><img src="./github.svg" /></a>
+		</header>
+		<main>
+			<div class="container py-8">
+				<div class="intro">
+					<h2>A collection of CSS snippets to help you build common interfaces.</h2>
+				</div>
+				<div class="stack-y gap-8">
+					<section class="stack-y">
+						<h2>Buttons</h2>
+						<div class="auto-grid">
+							<a class="card" href="playground.html?name=button">
+								<div class="card-body">
+									<button class="button" type="button">Button</button>
+								</div>
+								<div class="card-footer">
+									<h4>Button</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=button-group">
+								<div class="card-body">
+									<div class="button-group" role="group" aria-label="Basic example">
+										<button class="button" type="button">Left</button>
+										<button class="button" type="button">Middle</button>
+										<button class="button" type="button">Right</button>
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Button group</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=button-icon">
+								<div class="card-body">
+									<button class="button button-icon" type="button">
+										<svg class="icon" width="1.25em" style="--_icon: url(https://api.iconify.design/lucide/x.svg)"></svg>
+									</button>
+								</div>
+								<div class="card-footer">
+									<h4>Button icon</h4>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section class="stack-y">
+						<h2>Data display</h2>
+						<div class="auto-grid">
+							<a class="card is-full" href="playground.html?name=accordion">
+								<div class="card-body">
+									<div class="accordion">
+										<div class="accordion-item">
+											<h3>
+												<button class="accordion-button" type="button" aria-expanded="false" aria-controls="accordion-1">Accordion title 1</button>
+											</h3>
+											<div id="accordion-1" class="accordion-panel">Accordion panel 2</div>
+										</div>
+										<div class="accordion-item">
+											<h3>
+												<button class="accordion-button" type="button" aria-expanded="false" aria-controls="accordion-2">Accordion title 2</button>
+											</h3>
+											<div id="accordion-2" class="accordion-panel">Accordion panel 2</div>
+										</div>
+										<div class="accordion-item">
+											<h3>
+												<button class="accordion-button" type="button" aria-expanded="false" aria-controls="accordion-3">Accordion title 3</button>
+											</h3>
+											<div id="accordion-3" class="accordion-panel">Accordion panel 3</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Accordion</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=avatar">
+								<div class="card-body">
+									<div class="avatar">
+										<svg class="icon" width="80%" style="--_icon: url(https://api.iconify.design/heroicons/user-circle-solid.svg)"></svg>
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Avatar</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=badge">
+								<div class="card-body">
+									<span class="badge">99</span>
+								</div>
+								<div class="card-footer">
+									<h4>Badge</h4>
+								</div>
+							</a>
+							<a class="card is-full" href="playground.html?name=divider">
+								<div class="card-body">
+									<hr class="divider" />
+								</div>
+								<div class="card-footer">
+									<h4>Divider</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=icon">
+								<div class="card-body">
+									<svg class="icon" width="1.25em" style="--_icon: url(https://api.iconify.design/lucide/smile.svg)"></svg>
+								</div>
+								<div class="card-footer">
+									<h4>Icon</h4>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section class="stack-y">
+						<h2>Feedback</h2>
+						<div class="auto-grid">
+							<a class="card is-full" href="playground.html?name=alert">
+								<div class="card-body">
+									<div class="alert" role="alert">A simple alert!</div>
+								</div>
+								<div class="card-footer">
+									<h4>Alert</h4>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section class="stack-y">
+						<h2>Forms</h2>
+						<div class="auto-grid">
+							<a class="card" href="playground.html?name=checkbox">
+								<div class="card-body">
+									<input class="checkbox" type="checkbox" checked />
+								</div>
+								<div class="card-footer">
+									<h4>Checkbox</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=input">
+								<div class="card-body">
+									<input class="input" type="text" placeholder="First name" />
+								</div>
+								<div class="card-footer">
+									<h4>Input</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=label">
+								<div class="card-body">
+									<label class="label" for="your-input">First name</label>
+								</div>
+								<div class="card-footer">
+									<h4>Label</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=radio">
+								<div class="card-body">
+									<div>
+										<input class="radio" type="radio" name="basic" />
+										<input class="radio" type="radio" name="basic" checked />
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Radio</h4>
+								</div>
+							</a>
+							<a class="card is-full" href="playground.html?name=select">
+								<div class="card-body">
+									<div class="select">
+										<select>
+											<option value="">--Select an option--</option>
+											<option value="dog">🐶 Dog</option>
+											<option value="cat">🐱 Cat</option>
+											<option value="hamster">🐹 Hamster</option>
+											<option value="parrot">🦜 Parrot</option>
+											<option value="spider">🕷️ Spider</option>
+										</select>
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Select</h4>
+								</div>
+							</a>
+							<a class="card" href="playground.html?name=textarea">
+								<div class="card-body">
+									<textarea class="textarea" rows="4" placeholder="Add your comment..."></textarea>
+								</div>
+								<div class="card-footer">
+									<h4>Textarea</h4>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section class="stack-y">
+						<h2>Layout</h2>
+						<div class="auto-grid">
+							<a class="card is-full" href="playground.html?name=group">
+								<div class="card-body">
+									<div class="group self-center">
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Group</h4>
+								</div>
+							</a>
+							<a class="card is-full" href="playground.html?name=stack">
+								<div class="card-body">
+									<div class="stack">
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+										<div>item</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<h4>Stack</h4>
+								</div>
+							</a>
+							<a class="card is-full" href="playground.html?name=wrapper">
+								<div class="card-body">
+									<div class="wrapper">wrapper</div>
+								</div>
+								<div class="card-footer">
+									<h4>Wrapper</h4>
+								</div>
+							</a>
+						</div>
+					</section>
+					<section class="stack-y">
+						<h2>Navigation</h2>
+						<div class="auto-grid">
+							<div class="card" href="playground.html?name=link">
+								<div class="card-body">
+									<a href="#">Link</a>
+								</div>
+								<div class="card-footer">
+									<h4>Link</h4>
+								</div>
+								<a class="card-link" href="playground.html?name=link"></a>
+							</div>
+							<div class="card">
+								<div class="card-body">
+									<nav aria-label="breadcrumb">
+										<ol class="breadcrumb">
+											<li class="breadcrumb-item"><a href="#">Home</a></li>
+											<li class="breadcrumb-item"><a href="#">Library</a></li>
+											<li class="breadcrumb-item active" aria-current="page">Data</li>
+										</ol>
+									</nav>
+								</div>
+								<div class="card-footer">
+									<h4>Breadcrumb</h4>
+								</div>
+								<a class="card-link" href="playground.html?name=breadcrumb"></a>
+							</div>
+						</div>
+					</section>
+				</div>
 			</div>
-			<div class="stack-y gap-8">
-				<section class="stack-y">
-					<h2>Buttons</h2>
-					<div class="auto-grid">
-						<a class="card" href="playground.html?name=button">
-							<div class="card-body">
-								<button class="button" type="button">Button</button>
-							</div>
-							<div class="card-footer">
-								<h4>Button</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=button-group">
-							<div class="card-body">
-								<div class="button-group" role="group" aria-label="Basic example">
-									<button class="button" type="button">Left</button>
-									<button class="button" type="button">Middle</button>
-									<button class="button" type="button">Right</button>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Button group</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=button-icon">
-							<div class="card-body">
-								<button class="button button-icon" type="button">
-									<svg class="icon" width="1.25em"
-										style="--_icon: url(https://api.iconify.design/lucide/x.svg);"></svg>
-								</button>
-							</div>
-							<div class="card-footer">
-								<h4>Button icon</h4>
-							</div>
-						</a>
-					</div>
-				</section>
-				<section class="stack-y">
-					<h2>Data display</h2>
-					<div class="auto-grid">
-						<a class="card is-full" href="playground.html?name=accordion">
-							<div class="card-body">
-								<div class="accordion">
-									<div class="accordion-item">
-										<h3>
-											<button class="accordion-button" type="button" aria-expanded="false"
-												aria-controls="accordion-1">Accordion title 1</button>
-										</h3>
-										<div id="accordion-1" class="accordion-panel">Accordion panel 2</div>
-									</div>
-									<div class="accordion-item">
-										<h3>
-											<button class="accordion-button" type="button" aria-expanded="false"
-												aria-controls="accordion-2">Accordion title 2</button>
-										</h3>
-										<div id="accordion-2" class="accordion-panel">Accordion panel 2</div>
-									</div>
-									<div class="accordion-item">
-										<h3>
-											<button class="accordion-button" type="button" aria-expanded="false"
-												aria-controls="accordion-3">Accordion title 3</button>
-										</h3>
-										<div id="accordion-3" class="accordion-panel">Accordion panel 3</div>
-									</div>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Accordion</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=avatar">
-							<div class="card-body">
-								<div class="avatar">
-									<svg class="icon" width="80%"
-										style="--_icon: url(https://api.iconify.design/heroicons/user-circle-solid.svg)"></svg>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Avatar</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=badge">
-							<div class="card-body">
-								<span class="badge">99</span>
-							</div>
-							<div class="card-footer">
-								<h4>Badge</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=icon">
-							<div class="card-body">
-								<svg class="icon" width="1.25em"
-									style="--_icon: url(https://api.iconify.design/lucide/smile.svg);"></svg>
-							</div>
-							<div class="card-footer">
-								<h4>Icon</h4>
-							</div>
-						</a>
-					</div>
-				</section>
-				<section class="stack-y">
-					<h2>Feedback</h2>
-					<div class="auto-grid">
-						<a class="card is-full" href="playground.html?name=alert">
-							<div class="card-body">
-								<div class="alert" role="alert">A simple alert!</div>
-							</div>
-							<div class="card-footer">
-								<h4>Alert</h4>
-							</div>
-						</a>
-					</div>
-				</section>
-				<section class="stack-y">
-					<h2>Forms</h2>
-					<div class="auto-grid">
-						<a class="card" href="playground.html?name=checkbox">
-							<div class="card-body">
-								<input class="checkbox" type="checkbox" checked>
-							</div>
-							<div class="card-footer">
-								<h4>Checkbox</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=input">
-							<div class="card-body">
-								<input class="input" type="text" placeholder="First name">
-							</div>
-							<div class="card-footer">
-								<h4>Input</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=label">
-							<div class="card-body">
-								<label class="label" for="your-input">First name</label>
-							</div>
-							<div class="card-footer">
-								<h4>Label</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=radio">
-							<div class="card-body">
-								<div>
-									<input class="radio" type="radio" name="basic">
-									<input class="radio" type="radio" name="basic" checked>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Radio</h4>
-							</div>
-						</a>
-						<a class="card is-full" href="playground.html?name=select">
-							<div class="card-body">
-								<div class="select">
-									<select>
-										<option value="">--Select an option--</option>
-										<option value="dog">🐶 Dog</option>
-										<option value="cat">🐱 Cat</option>
-										<option value="hamster">🐹 Hamster</option>
-										<option value="parrot">🦜 Parrot</option>
-										<option value="spider">🕷️ Spider</option>
-									</select>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Select</h4>
-							</div>
-						</a>
-						<a class="card" href="playground.html?name=textarea">
-							<div class="card-body">
-								<textarea class="textarea" rows="4" placeholder="Add your comment..."></textarea>
-							</div>
-							<div class="card-footer">
-								<h4>Textarea</h4>
-							</div>
-						</a>
-					</div>
-				</section>
-				<section class="stack-y">
-					<h2>Layout</h2>
-					<div class="auto-grid">
-						<a class="card is-full" href="playground.html?name=group">
-							<div class="card-body">
-								<div class="group self-center">
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Group</h4>
-							</div>
-						</a>
-						<a class="card is-full" href="playground.html?name=stack">
-							<div class="card-body">
-								<div class="stack">
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-									<div>item</div>
-								</div>
-							</div>
-							<div class="card-footer">
-								<h4>Stack</h4>
-							</div>
-						</a>
-						<a class="card is-full" href="playground.html?name=wrapper">
-							<div class="card-body">
-								<div class="wrapper">wrapper</div>
-							</div>
-							<div class="card-footer">
-								<h4>Wrapper</h4>
-							</div>
-						</a>
-					</div>
-				</section>
-			</div>
-		</div>
-	</main>
-</body>
-
+		</main>
+	</body>
 </html>
