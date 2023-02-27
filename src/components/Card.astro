@@ -1,0 +1,10 @@
+---
+const {name} = Astro.props;
+const snippet = (await import(`../../snippets/${name}/index.js`)).default;
+---
+
+<div class="card">
+  <div class="card-body" set:html={snippet.html.default}></div>
+  <div class="card-footer"><h4>{name}</h4></div>
+  <a href={`/snippets/${name}`}></a>
+</div>

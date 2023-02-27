@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Playground from "../../components/Playground.astro";
+
+export function getStaticPaths() {
+	return [
+		{
+			params: { name: "button" },
+		},
+	];
+}
+
+const { name } = Astro.params;
+---
+
+<BaseLayout>
+  <Playground name={name} />
+</BaseLayout>

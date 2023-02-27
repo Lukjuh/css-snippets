@@ -1,9 +1,0 @@
-.divider {
-	--_size: 1px;
-	--_color: #e0e4e5;
-
-	margin: 0;
-	border-style: solid;
-	border-width: var(--_size) 0 0 0;
-	border-color: var(--_color);
-}

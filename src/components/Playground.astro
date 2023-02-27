@@ -1,0 +1,86 @@
+---
+import Switch from "./Switch.astro";
+const {name} = Astro.props;
+const snippet = (await import(`../../snippets/${name}/index.js`)).default;
+---
+
+<css-playground class="playground" html={JSON.stringify(snippet.html)} css={JSON.stringify(snippet.css)}>
+	<div class="head">
+		<h2>{name}</h2>
+		<div class="group">
+			{Object.keys(snippet.html).length > 1 
+				? <select class="js-variant">{Object.keys(snippet.html).map(name => <option value={name}>{name}</option>)}</select> 
+				: null
+			}
+			<Switch />
+		</div>
+	</div>
+	<div class="content">
+		<div class="editor">
+			<div class="editor-tab">
+				<button class="js-tab button" value="html">HTML</button>
+				<button class="js-tab button" value="css">CSS</button>
+			</div>
+			<div class="js-editor"></div>
+		</div>
+		<div class="preview">
+			<iframe class="js-iframe"></iframe>
+		</div>
+	</div>
+</css-playground>
+
+<script>
+	import cssIframe from "../styles/iframe.css?inline";
+	import loader from "@monaco-editor/loader";
+
+	class Playground extends HTMLElement {
+		html = JSON.parse(this.getAttribute('html'));
+		css = JSON.parse(this.getAttribute('css'));
+
+		updateExample() {
+			this.querySelector(".js-iframe").srcdoc = `
+				<style>${cssIframe} ${this.css.variants ? this.css.variants : ''} ${this.cssModel.getValue()}</style>
+				<div class="container">${this.htmlModel.getValue()}</div>
+			`;
+		}
+
+		updateVariant(e) {
+			this.htmlModel.setValue(this.html[e.target.value]);
+			this.updateExample();
+		}
+
+		updateModel(e) {
+			if (e.target.value === "html") {
+				this.editor.setModel(this.htmlModel);
+			}
+			if (e.target.value === "css") {
+				this.editor.setModel(this.cssModel);
+			}
+		}
+
+		connectedCallback() {
+			loader.init().then(monaco => {
+				this.htmlModel = monaco.editor.createModel(this.html.default, "html", monaco.Uri.parse("file:///html"));
+				this.cssModel = monaco.editor.createModel(this.css.default, "css", monaco.Uri.parse("file:///css"));
+
+				this.editor = monaco.editor.create(this.querySelector('.js-editor'), {
+						model: this.cssModel,
+						automaticLayout: true,
+						minimap: {
+							enabled: false,
+						},
+				});
+
+				this.querySelector(".js-variant")?.addEventListener("change", this.updateVariant.bind(this));
+				this.querySelectorAll(".js-tab").forEach((el) => el.addEventListener("click", this.updateModel.bind(this)));
+				this.editor.onDidChangeModelContent(() => this.updateExample());
+				window.addEventListener("resize", () => this.editor.layout({}));
+				this.updateExample();
+			})
+		}
+	}
+
+	customElements.define('css-playground', Playground);
+
+	document.querySelectorAll('[data-astro-dev-id*="?inline"]').forEach(el => el.remove()); // NOTE: bug https://github.com/withastro/astro/pull/6161
+</script>
