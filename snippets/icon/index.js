@@ -1,6 +1,6 @@
 import styles from "./index.css?inline";
 
-const $default = `<button class="button">Button</button>`;
+const $default = `<svg class="icon" style="--_icon: url(https://api.iconify.design/lucide/smile.svg);"></svg>`;
 
 export default {
   html: {

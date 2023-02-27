@@ -1,0 +1,25 @@
+.badge {
+	--_padding-x: 0.5rem;
+	--_padding-y: 0.25rem;
+	--_font-size: 0.75rem;
+	--_font-weight: 700;
+	--_border-radius: 9999px;
+
+	--_color: #252521;
+	--_bg: #ebedef;
+
+	white-space: nowrap;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	padding-block: var(--_padding-y);
+	padding-inline: var(--_padding-x);
+	font-size: var(--_font-size);
+	font-weight: var(--_font-weight);
+	line-height: 1;
+	border-radius: var(--_border-radius);
+
+	color: var(--_color);
+	background-color: var(--_bg);
+}

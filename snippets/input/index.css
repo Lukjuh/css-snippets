@@ -1,0 +1,52 @@
+.input {
+  --_padding-x: 0.75rem;
+  --_padding-y: 0.375rem;
+  --_font-size: 1rem;
+  --_line-height: 1.5;
+  --_border-radius: 0.325rem;
+  --_border-width: 1px;
+
+  --_color: #252521;
+  --_bg: #ffffff;
+  --_border-color: #d1d6d8;
+
+  --_placeholder-color: #7e8282;
+
+  --_disabled-color: #666968;
+  --_disabled-bg: #f2f4f6;
+  --_disabled-border-color: #e0e4e5;
+
+  --_focus-outline: 2px solid #364fc7;
+  --_focus-outline-offset: -1px;
+
+  appearance: none;
+  font: inherit;
+  display: block;
+  inline-size: 100%;
+
+  padding-inline: var(--_padding-x);
+  padding-block: var(--_padding-y);
+  font-size: var(--_font-size);
+  line-height: var(--_line-height);
+  border-radius: var(--_border-radius);
+
+  border: var(--_border-width) solid var(--_border-color);
+  color: var(--_color);
+  background-color: var(--_bg);
+}
+
+.input::placeholder {
+  color: var(--_placeholder-color);
+}
+
+.input:focus-visible {
+  outline: var(--_focus-outline);
+  outline-offset: var(--_focus-outline-offset);
+}
+
+.input[readonly],
+.input:disabled {
+  color: var(--_disabled-color);
+  background-color: var(--_disabled-bg);
+  border-color: var(--_disabled-border-color);
+}

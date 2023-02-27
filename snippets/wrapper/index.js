@@ -1,6 +1,6 @@
 import styles from "./index.css?inline";
 
-const $default = `<button class="button">Button</button>`;
+const $default = `<div class="wrapper">Wrapper</div>`;
 
 export default {
   html: {

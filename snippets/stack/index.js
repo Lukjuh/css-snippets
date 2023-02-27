@@ -1,6 +1,12 @@
 import styles from "./index.css?inline";
 
-const $default = `<button class="button">Button</button>`;
+const $default = `
+<div class="stack">
+	<div>item</div>
+	<div>item</div>
+	<div>item</div>
+</div>
+`;
 
 export default {
   html: {

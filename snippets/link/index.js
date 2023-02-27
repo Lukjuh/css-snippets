@@ -1,6 +1,6 @@
 import styles from "./index.css?inline";
 
-const $default = `<button class="button">Button</button>`;
+const $default = `<a class="link" href="#">Link</a>`;
 
 export default {
   html: {

@@ -3,11 +3,31 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Playground from "../../components/Playground.astro";
 
 export function getStaticPaths() {
-	return [
-		{
-			params: { name: "button" },
-		},
+	const snippets = [
+		"accordion",
+		"alert", 
+		"avatar", 
+		"badge", 
+		"breadcrumb", 
+		"button", 
+		"button-group", 
+		"button-icon",
+		"checkbox",
+		"group",
+		"icon",
+		"input",
+		"label",
+		"link",
+		"radio",
+		"select",
+		"stack",
+		"textarea",
+		"wrapper"
 	];
+
+  return snippets.map((snippet) => {
+    return { params: { name: snippet } };
+  });
 }
 
 const { name } = Astro.params;
