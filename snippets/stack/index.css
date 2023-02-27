@@ -1,8 +1,0 @@
-.stack {
-	--_gap: 1rem;
-
-	display: flex;
-	flex-direction: column;
-	align-self: stretch;
-	gap: var(--_gap);
-}
