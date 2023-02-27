@@ -1,6 +1,6 @@
 import styles from "./index.css?inline";
 
-const $default = `<button class="button">Button</button>`;
+const $default = `<label class="label" for="your-input">First name</label>`;
 
 export default {
   html: {

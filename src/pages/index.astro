@@ -1,5 +1,24 @@
 ---
+import "../../snippets/accordion/index.css";
+import "../../snippets/alert/index.css";
+import "../../snippets/avatar/index.css";
+import "../../snippets/badge/index.css";
+import "../../snippets/breadcrumb/index.css";
 import "../../snippets/button/index.css";
+import "../../snippets/button-group/index.css";
+import "../../snippets/button-icon/index.css";
+import "../../snippets/checkbox/index.css";
+import "../../snippets/group/index.css";
+import "../../snippets/icon/index.css";
+import "../../snippets/input/index.css";
+import "../../snippets/label/index.css";
+import "../../snippets/link/index.css";
+import "../../snippets/radio/index.css";
+import "../../snippets/select/index.css";
+import "../../snippets/stack/index.css";
+import "../../snippets/textarea/index.css";
+import "../../snippets/wrapper/index.css";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Card from "../components/Card.astro";
 ---
@@ -14,6 +33,49 @@ import Card from "../components/Card.astro";
 				<h2>Buttons</h2>
 				<div class="auto-grid">
 					<Card name="button" />
+					<Card name="button-group" />
+					<Card name="button-icon" />
+				</div>
+			</section>
+			<section class="stack-y">
+				<h2>Data display</h2>
+				<div class="auto-grid">
+					<Card name="accordion" />
+					<Card name="avatar" />
+					<Card name="badge" />
+					<Card name="icon" />
+				</div>
+			</section>
+			<section class="stack-y">
+				<h2>Feedback</h2>
+				<div class="auto-grid">
+					<Card name="alert" />
+				</div>
+			</section>
+			<section class="stack-y">
+				<h2>Forms</h2>
+				<div class="auto-grid">
+					<Card name="checkbox" />
+					<Card name="input" />
+					<Card name="label" />
+					<Card name="radio" />
+					<Card name="select" />
+					<Card name="textarea" />
+				</div>
+			</section>
+			<section class="stack-y">
+				<h2>Layout</h2>
+				<div class="auto-grid">
+					<Card name="group" />
+					<Card name="stack" />
+					<Card name="wrapper" />
+				</div>
+			</section>
+			<section class="stack-y">
+				<h2>Navigation</h2>
+				<div class="auto-grid">
+					<Card name="breadcrumb" />
+					<Card name="link" />
 				</div>
 			</section>
 		</div>

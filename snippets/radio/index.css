@@ -1,0 +1,64 @@
+.radio {
+	--_size: 1.125em;
+	--_border-radius: 50%;
+	--_border-width: 1px;
+	--_icon: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+
+	--_bg: #ffffff;
+	--_border-color: #d1d6d8;
+
+	--_checked-color: #ffffff;
+	--_checked-bg: #4263eb;
+	--_checked-border-color: #4263eb;
+
+	--_disabled-color: #979b9d;
+	--_disabled-bg: #f2f4f6;
+	--_disabled-border-color: #e0e4e5;
+
+	--_focus-outline: 2px solid #364fc7;
+	--_focus-outline-offset: 2px;
+
+	appearance: none;
+	font-size: inherit;
+	margin: 0;
+	display: inline-grid;
+	place-content: center;
+
+	height: var(--_size);
+	width: var(--_size);
+	border-radius: var(--_border-radius);
+
+	border: var(--_border-width) solid var(--_border-color);
+	background-color: var(--_bg);
+}
+
+.radio::before {
+	content: "";
+	height: var(--_size);
+	width: var(--_size);
+	scale: 0;
+	background: currentColor;
+	-webkit-mask: var(--_icon) center / contain no-repeat;
+	mask: var(--_icon) center / contain no-repeat;
+}
+
+.radio:focus-visible {
+	outline: var(--_focus-outline);
+	outline-offset: var(--_focus-outline-offset);
+}
+
+.radio:checked {
+	color: var(--_checked-color);
+	background-color: var(--_checked-bg);
+	border-color: var(--_checked-border-color);
+}
+
+.radio:checked::before {
+	scale: 1;
+}
+
+.radio:disabled {
+	color: var(--_disabled-color);
+	background-color: var(--_disabled-bg);
+	border-color: var(--_disabled-border-color);
+}

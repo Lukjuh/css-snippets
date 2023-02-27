@@ -6,7 +6,7 @@ const snippet = (await import(`../../snippets/${name}/index.js`)).default;
 
 <css-playground class="playground" html={JSON.stringify(snippet.html)} css={JSON.stringify(snippet.css)}>
 	<div class="head">
-		<h2>{name}</h2>
+		<h2>{name.replaceAll("-", " ")}</h2>
 		<div class="group">
 			{Object.keys(snippet.html).length > 1 
 				? <select class="js-variant">{Object.keys(snippet.html).map(name => <option value={name}>{name}</option>)}</select> 
@@ -45,7 +45,7 @@ const snippet = (await import(`../../snippets/${name}/index.js`)).default;
 		}
 
 		updateVariant(e) {
-			this.htmlModel.setValue(this.html[e.target.value]);
+			this.htmlModel.setValue(this.html[e.target.value].trim());
 			this.updateExample();
 		}
 
@@ -60,7 +60,7 @@ const snippet = (await import(`../../snippets/${name}/index.js`)).default;
 
 		connectedCallback() {
 			loader.init().then(monaco => {
-				this.htmlModel = monaco.editor.createModel(this.html.default, "html", monaco.Uri.parse("file:///html"));
+				this.htmlModel = monaco.editor.createModel(this.html.default.trim(), "html", monaco.Uri.parse("file:///html"));
 				this.cssModel = monaco.editor.createModel(this.css.default, "css", monaco.Uri.parse("file:///css"));
 
 				this.editor = monaco.editor.create(this.querySelector('.js-editor'), {

@@ -379,3 +379,17 @@ h4 {
 .gap-8 {
 	gap: var(--size-8);
 }
+
+.card :is(.group, .stack) > * {
+	padding: 0.35rem 0.5rem;
+	border-radius: 0.25rem;
+	color: #21307a;
+	background: #dbe4ff;
+}
+
+.card :is(.wrapper) {
+	padding: 0.35rem 0.5rem;
+	border-radius: 0.25rem;
+	color: #21307a;
+	background: #dbe4ff;
+}

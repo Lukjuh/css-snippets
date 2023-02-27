@@ -1,0 +1,7 @@
+.wrapper {
+	--_padding-inline: 2rem;
+	--_max-width: 70ch;
+
+	margin-inline: auto;
+	inline-size: min(100% - var(--_padding-inline), var(--_max-width));
+}
