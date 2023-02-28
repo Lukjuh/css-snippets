@@ -1,10 +1,9 @@
 ---
-const {name} = Astro.props;
+const {name, fullWidth} = Astro.props;
 const snippet = (await import(`../../snippets/${name}/index.js`)).default;
 ---
-
 <div class="card">
-  <div class="card-body" set:html={snippet.html.default}></div>
-  <div class="card-footer"><h4>{name}</h4></div>
+  <div class:list={['card-body', { 'w-full': fullWidth }]} set:html={snippet.html.default}></div>
+  <div class="card-footer"><h4>{name.replaceAll("-", " ")}</h4></div>
   <a href={`/snippets/${name}`}></a>
 </div>

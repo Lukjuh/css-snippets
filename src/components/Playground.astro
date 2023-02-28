@@ -73,6 +73,8 @@ const snippet = (await import(`../../snippets/${name}/index.js`)).default;
 
 				this.querySelector(".js-variant")?.addEventListener("change", this.updateVariant.bind(this));
 				this.querySelectorAll(".js-tab").forEach((el) => el.addEventListener("click", this.updateModel.bind(this)));
+				this.htmlModel.updateOptions({ tabSize: 2 });
+				this.cssModel.updateOptions({ tabSize: 2 });
 				this.editor.onDidChangeModelContent(() => this.updateExample());
 				window.addEventListener("resize", () => this.editor.layout({}));
 				this.updateExample();

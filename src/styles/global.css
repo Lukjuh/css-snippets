@@ -303,11 +303,17 @@ h4 {
 
 .card-body {
 	font-family: system-ui;
-	display: grid;
-	place-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--size-1);
 	aspect-ratio: 4/3;
 	background-color: var(--brand-weakest);
 	padding: var(--size-4);
+
+	&.w-full > * {
+		width: 100%;
+	}
 }
 
 .card-footer {
@@ -380,13 +386,16 @@ h4 {
 	gap: var(--size-8);
 }
 
+.card :is(.group, .stack) {
+	align-self: center;
+}
+
 .card :is(.group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;
 	background: #dbe4ff;
 }
-
 .card :is(.wrapper) {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;

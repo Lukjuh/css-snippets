@@ -14,7 +14,7 @@ const $default = `
 
 export default {
   html: {
-    default: $default
+    default: $default,
   },
   css: {
     default: styles,
