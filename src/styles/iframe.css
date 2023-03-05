@@ -32,6 +32,10 @@ body:has(.accordion, .alert, .group, .divider, .input, .select, .stack, .textare
 	width: min(100%, 350px);
 }
 
+body:has(.wrapper) .container {
+	width: 100%;
+}
+
 :is(.group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;

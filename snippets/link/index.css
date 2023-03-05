@@ -1,4 +1,4 @@
-.link {
+a {
 	--_color: #4263eb;
 	--_hover-color: #364fc7;
 	--_focus-outline-color: #364fc7;
@@ -7,11 +7,11 @@
 	color: var(--_color);
 }
 
-.link:hover {
+a:hover {
 	text-decoration: underline;
 	color: var(--_hover-color);
 }
 
-.link:focus-visible {
+a:focus-visible {
 	outline-color: var(--_focus-outline-color);
 }

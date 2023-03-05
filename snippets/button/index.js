@@ -1,8 +1,10 @@
 import styles from "./index.css?inline";
 import iconStyles from "../icon/index.css?inline";
 
-const $default = `<button class="button">Button</button>`;
-const disabled = `<button class="button" disabled>Button</button>`;
+const $default = `<button class="button" type="button">Button</button>`;
+
+const disabled = `<button class="button" type="button" disabled>Button</button>`;
+
 const sizes = `
 <style>
 .button-small {
@@ -22,7 +24,8 @@ const sizes = `
 <button class="button" type="button">Default button</button>
 <button class="button button-large" type="button">Large button</button>
 `;
-const customColor = `
+
+const variants = `
 <style>
 .button-primary {
   --_color: #ffffff;
@@ -37,12 +40,7 @@ const customColor = `
   --_active-bg: #364fc7;
   --_active-border-color: #364fc7;
 }
-</style>
 
-<button class="button button-primary" type="button">Button</button>
-`;
-const customVariants = `
-<style>
 .button-outline-primary {
   --_color: #4263eb;
   --_bg: #ffffff;
@@ -72,9 +70,11 @@ const customVariants = `
 }
 </style>
 
-<button class="button button-outline-primary" type="button">Button outline</button>
-<button class="button button-ghost-primary" type="button">Button ghost</button>
+<button class="button button-primary" type="button">Button</button>
+<button class="button button-outline-primary" type="button">Button</button>
+<button class="button button-ghost-primary" type="button">Button</button>
 `;
+
 const withIcons = `
 <!-- dependency: https://www.css-snippets.io/snippets/icon -->
 
@@ -94,9 +94,8 @@ export default {
     default: $default,
     disabled,
     sizes,
-    'custom color': customColor,
-    'custom variants': customVariants,
-    'with icons': withIcons,
+    variants,
+    'with icons': withIcons
   },
   css: {
     default: styles,
