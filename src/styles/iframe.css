@@ -37,6 +37,10 @@ body:has(.auto-grid) .container {
 	width: min(100%, 850px);
 }
 
+body:has(.wrapper) .container {
+	width: 100%;
+}
+
 :is(.auto-grid, .group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
