@@ -32,7 +32,12 @@ body:has(.accordion, .alert, .group, .divider, .input, .select, .stack, .textare
 	width: min(100%, 350px);
 }
 
-:is(.group, .stack) > * {
+body:has(.auto-grid) .container {
+	display: block;
+	width: min(100%, 850px);
+}
+
+:is(.auto-grid, .group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;
