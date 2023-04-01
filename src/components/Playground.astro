@@ -83,6 +83,4 @@ const snippet = (await import(`../../snippets/${name}/index.js`)).default;
 	}
 
 	customElements.define('css-playground', Playground);
-
-	document.querySelectorAll('[data-astro-dev-id*="?inline"]').forEach(el => el.remove()); // NOTE: bug https://github.com/withastro/astro/pull/6161
 </script>

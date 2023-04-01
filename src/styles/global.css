@@ -390,7 +390,7 @@ h4 {
 	align-self: center;
 }
 
-.card :is(.group, .stack) > * {
+.card :is(.auto-grid, .group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;

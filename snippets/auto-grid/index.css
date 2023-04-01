@@ -1,0 +1,8 @@
+.auto-grid {
+	--_placement: auto-fit;
+	--_item-min-width: 15rem;
+
+	display: grid;
+	grid-template-columns: repeat(var(--_placement), minmax(var(--_item-min-width), 1fr));
+	gap: 1rem;
+}
