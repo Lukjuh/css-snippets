@@ -1,4 +1,4 @@
-import styles from "./index.css?inline";
+import styles from "./index.css?raw";
 
 const $default = `<svg class="icon" width="1.25rem" style="--_icon: url(https://api.iconify.design/lucide/smile.svg);"></svg>`;
 

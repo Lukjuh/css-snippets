@@ -1,4 +1,4 @@
-import styles from "./index.css?inline";
+import styles from "./index.css?raw";
 
 const $default = `<label class="label" for="your-input">First name</label>`;
 

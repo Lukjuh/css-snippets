@@ -1,5 +1,5 @@
-import styles from "./index.css?inline";
-import linkStyles from "../link/index.css?inline";
+import styles from "./index.css?raw";
+import linkStyles from "../link/index.css?raw";
 
 console.log(linkStyles)
 

@@ -1,5 +1,5 @@
-import styles from "./index.css?inline";
-import iconStyles from "../icon/index.css?inline";
+import styles from "./index.css?raw";
+import iconStyles from "../icon/index.css?raw";
 
 const $default = `
 <div class="alert" role="alert">A simple alert!</div>

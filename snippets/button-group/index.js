@@ -1,5 +1,5 @@
-import styles from "./index.css?inline";
-import buttonStyles from "../button/index.css?inline";
+import styles from "./index.css?raw";
+import buttonStyles from "../button/index.css?raw";
 
 const $default = `
 <div class="button-group" role="group" aria-label="Basic example">

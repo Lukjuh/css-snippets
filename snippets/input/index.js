@@ -1,4 +1,4 @@
-import styles from "./index.css?inline";
+import styles from "./index.css?raw";
 
 const $default = `<input class="input" type="text" placeholder="First name">`;
 const disabled = `<input class="input" type="text" placeholder="First name" disabled>`;
