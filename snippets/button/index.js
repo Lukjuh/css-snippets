@@ -1,5 +1,5 @@
-import styles from "./index.css?inline";
-import iconStyles from "../icon/index.css?inline";
+import styles from "./index.css?raw";
+import iconStyles from "../icon/index.css?raw";
 
 const $default = `<button class="button" type="button">Button</button>`;
 
