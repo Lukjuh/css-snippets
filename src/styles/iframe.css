@@ -26,7 +26,8 @@ body {
 	gap: 0.5rem;
 }
 
-body:has(.accordion, .alert, .group, .divider, .input, .select, .stack, .textarea, .wrapper) .container {
+body:has(.accordion, .alert, .card, .group, .divider, .input, .select, .stack, .textarea, .wrapper)
+	.container {
 	display: grid;
 	gap: 0.5rem;
 	width: min(100%, 350px);

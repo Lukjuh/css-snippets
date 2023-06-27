@@ -1,0 +1,20 @@
+.card {
+	--_padding-x: 1rem;
+	--_padding-y: 1rem;
+	--_border-radius: 0.325rem;
+	--_border-width: 1px;
+
+	--_color: #252521;
+	--_bg: #ffffff;
+	--_border-color: #e0e4e5;
+
+	border-radius: var(--_border-radius);
+	border: var(--_border-width) solid var(--_border-color);
+	color: var(--_color);
+	background-color: var(--_bg);
+}
+
+.card-body {
+	padding-inline: var(--_padding-x);
+	padding-block: var(--_padding-y);
+}

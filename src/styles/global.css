@@ -281,7 +281,7 @@ h4 {
 	fill: var(--brand-weakest);
 }
 
-.card {
+.s-card {
 	display: flex;
 	flex-direction: column;
 	border-radius: var(--radius);
@@ -301,7 +301,7 @@ h4 {
 	}
 }
 
-.card-body {
+.s-card-body {
 	font-family: system-ui;
 	display: flex;
 	align-items: center;
@@ -316,7 +316,7 @@ h4 {
 	}
 }
 
-.card-footer {
+.s-card-footer {
 	padding: var(--size-3) var(--size-4);
 	border-top: 1px solid var(--border);
 
@@ -386,17 +386,17 @@ h4 {
 	gap: var(--size-8);
 }
 
-.card :is(.group, .stack) {
+.s-card :is(.group, .stack) {
 	align-self: center;
 }
 
-.card :is(.auto-grid, .group, .stack) > * {
+.s-card :is(.auto-grid, .group, .stack) > * {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;
 	background: #dbe4ff;
 }
-.card :is(.wrapper) {
+.s-card :is(.wrapper) {
 	padding: 0.35rem 0.5rem;
 	border-radius: 0.25rem;
 	color: #21307a;
